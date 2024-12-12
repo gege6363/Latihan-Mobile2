@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "726289601653",
-    "project_id": "if22c-11312136",
-    "storage_bucket": "if22c-11312136.appspot.com"
+    "project_number": "290326343898",
+    "project_id": "latihan-if22c-a2af1",
+    "storage_bucket": "latihan-if22c-a2af1.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:726289601653:android:0c7ee3bec73ef51b97143c",
+        "mobilesdk_app_id": "1:290326343898:android:9994126ca5ba0808a975e3",
         "android_client_info": {
           "package_name": "com.example.myapp"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAVPLeA_5DIqCdFSOHJnAlkz2IThYl7wpg"
+          "current_key": "AIzaSyCZiaROPpnPoF256yDvFLWT4PPpoUYBQPg"
         }
       ],
       "services": {

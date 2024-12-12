@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -53,10 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAVPLeA_5DIqCdFSOHJnAlkz2IThYl7wpg',
-    appId: '1:726289601653:android:0c7ee3bec73ef51b97143c',
-    messagingSenderId: '726289601653',
-    projectId: 'if22c-11312136',
-    storageBucket: 'if22c-11312136.appspot.com',
+    apiKey: 'AIzaSyCZiaROPpnPoF256yDvFLWT4PPpoUYBQPg',
+    appId: '1:290326343898:android:9994126ca5ba0808a975e3',
+    messagingSenderId: '290326343898',
+    projectId: 'latihan-if22c-a2af1',
+    storageBucket: 'latihan-if22c-a2af1.firebasestorage.app',
   );
+
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyDw90TEoGitgZcSBFYDcbDNF0Wb6TEHSxQ',
+    appId: '1:290326343898:web:ed96ae82e32e41e3a975e3',
+    messagingSenderId: '290326343898',
+    projectId: 'latihan-if22c-a2af1',
+    authDomain: 'latihan-if22c-a2af1.firebaseapp.com',
+    storageBucket: 'latihan-if22c-a2af1.firebasestorage.app',
+  );
+
 }

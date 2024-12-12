@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:myapp/app/controllers/auth_controller.dart';
+import 'package:myapp/app/modules/dosen/views/dosen_add_view.dart';
+import 'package:myapp/app/modules/dosen/views/dosen_view.dart';
+import 'package:myapp/app/modules/mahasiswa/views/mahasiswa_add_view.dart';
+import 'package:myapp/app/modules/mahasiswa/views/mahasiswa_view.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -24,10 +28,26 @@ class _DashboardAdminState extends State<DashboardAdmin> {
   final cAuth = Get.find<AuthController>();
   int _index = 0;
   List<Map> _fragment = [
-    {'title': 'Dashboard', 'view': 'Dashboard'},
-    {'title': 'Data Mahasiswa', 'view': 'Mahasiswa'},
-    {'title': 'Data Dosen', 'view': 'Dosen'},
-    {'title': 'Data Pegawai', 'view': 'Pegawai'},
+    {
+      'title': 'Dashboard',
+      'view': DosenView(),
+      'add': () => DosenAddView()
+    },
+    {
+      'title': 'Data Mahasiswa',
+      'view': MahasiswaView(),
+      'add': () => MahasiswaAddView()
+    },
+    {
+      'title': 'Data Dosen',
+      'view': DosenView(),
+      'add': () => DosenAddView()
+    },
+    {
+      'title': 'Data Pegawai',
+      'view': MahasiswaView(),
+      'add': () => MahasiswaAddView()
+    },
   ];
   @override
   Widget build(BuildContext context) {
@@ -37,8 +57,17 @@ class _DashboardAdminState extends State<DashboardAdmin> {
         backgroundColor: Colors.teal,
         titleSpacing: 0,
         title: Text(_fragment[_index]['title']),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Get.to(_fragment[_index]
+              ['add']);
+            },
+            icon: Icon(Icons.add_circle_outline),
+          )
+        ],
       ),
-      // body: _fragment[_index]['view'],
+      body: _fragment[_index]['view'],
     );
   }
 
@@ -60,7 +89,7 @@ class _DashboardAdminState extends State<DashboardAdmin> {
                     color: Colors.white,
                   ),
                   Text(
-                    "Reflan Nuari",
+                    "Gigih Hermawan",
                     style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
